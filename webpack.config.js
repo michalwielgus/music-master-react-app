@@ -23,9 +23,12 @@ module.exports = {
             }
         ]
     },
+  node: {
+    fs: 'empty',
+  },
     devServer: {
         port: 3000,
         contentBase: './build',
         inline: true
-    }
+    },
 }

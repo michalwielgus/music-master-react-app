@@ -1,0 +1,134 @@
+html, body, #app {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    background-color: #181818;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: #f2f2f2;
+}
+
+.app-title, .profile-details {
+    width:  100%;
+}
+
+.search-form {
+   padding: 10px 20% 10px 20%;
+    width: 100%;
+}
+
+.input-group-addon {
+    cursor: pointer;
+}
+
+/* Profile */
+
+.profile-details {
+    text-align: center;
+    display: flex;
+    width: 60%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.profile-image {
+    width: 30%;
+    border: solid 2px #1db954;
+    border-radius: 5px;
+}
+
+.profile-description {
+    width:  70%;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.profile-image img {
+    width: 100%;
+}
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.artist-name {
+    font-size: 32px;
+}
+
+/* Gallery */
+
+.gallery {
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.track {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    margin: 20px;
+    border: solid 2px #1db954;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer
+}
+
+.track-image {
+    width: 100%;
+    height: 100%;
+}
+
+.track-title {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    width: 100%;
+}
+
+.track-play {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 196px;
+    height: 196px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+}
+
+.track-play-inner {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 25px;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    top: 60px;
+    left: 70px;
+    border-radius: 50%;
+}
+
+.track-play:hover>.track-play-inner, .track-play:hover {
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+}
